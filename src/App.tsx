@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Courses } from "./view/Courses";
+import { ListCourses } from "./view/ListCourses";
 import { Register } from "./view/Register";
 
 import Layout from "./view/Layout";
@@ -14,7 +14,7 @@ export const App = (): JSX.Element => {
       <Routes>
         <Route element={<Layout />}>
           <Route path={URL.register} element={<Register />} />
-          <Route path={URL.courses} element={<Courses />} />
+          <Route path={URL.courses} element={<ListCourses />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Input, Button, Form, DatePicker } from "antd";
 import moment from "antd/node_modules/moment";
 
-import { RegisterForm } from "./model";
+import { RegisterForm } from "./type";
 
 import { URL } from "../../constants/URL";
 
