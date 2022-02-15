@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { Input, Button, Form, DatePicker } from "antd";
 import moment from "antd/node_modules/moment";
 
 import { RegisterForm } from "./model";
+
+import { URL } from "../../constants/URL";
 
 const { Item } = Form;
 
 const { TextArea } = Input;
 
 export const Register = (): JSX.Element => {
+  const navigateTo = useNavigate();
   const [form, setForm] = useState<RegisterForm>({
     name: "",
     email: "",
@@ -22,6 +27,7 @@ export const Register = (): JSX.Element => {
   const handleSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log("form", form);
+    navigateTo(URL.courses);
   };
 
   return (
